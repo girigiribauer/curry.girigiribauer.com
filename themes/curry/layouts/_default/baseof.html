@@ -14,10 +14,14 @@
   {{- else }}
   <meta name="description" content="{{ .Params.Summary }}">
   {{- end }}
+  {{- if .IsHome }}
+  <meta property="og:image" content="/images/ogimage.jpg">
+  {{- else }}
   {{- $featureImage := (.Resources.ByType "image").GetMatch "heroimage.jpg" }}
   {{- with $featureImage }}
   {{- $resizedFeatureImage := $featureImage.Fit "1200x630" }}
   <meta property="og:image" content="{{ $resizedFeatureImage.Permalink }}">
+  {{- end }}
   {{- end }}
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">

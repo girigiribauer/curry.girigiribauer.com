@@ -304,6 +304,11 @@ img {
   vertical-align: middle;
 }
 
+.article-single a {
+  color: #ffa100;
+  font-weight: bold;
+}
+
 /**
  * comingsoon
  */
