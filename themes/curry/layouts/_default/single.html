@@ -1,0 +1,49 @@
+{{- define "main" -}}
+<nav class="globalnavi">
+  <a href="/">
+    <img class="icon" src="/images/icon-curry-brown.svg" alt="">
+    <span class="text">お昼に何食べるか考えるのつらい ご当地カレーが食べたい！</span>
+  </a>
+</nav>
+
+<header class="block hero itadakimasu">
+  <h1 class="heading">
+    <span class="no">#{{ .Slug }}</span>
+    <span class="phrase">{{ .Title | markdownify }}</span>
+  </h1>
+</header>
+
+<article class="article-single">
+  <div class="box">
+    {{ .Content }}
+  </div>
+</article>
+
+<footer class="block hero gochisousama">
+  <div class="heading">
+    <span class="phrase">ごちそうさまでした！</span>
+  </div>
+</footer>
+
+{{ if .Prev }}
+{{ with .Prev }}
+{{ $title := .Title | markdownify }}
+{{ $img := (.Resources.ByType "image").GetMatch "*" }}
+<div class="block article-listitem" {{ with $img }} style="background-image: url('{{ .Permalink }}')" {{ end }}>
+  <a class="box" href="{{ .Permalink }}">
+    <span class="no">#{{ .Slug }}</span>
+    <h2 class="heading">{{ $title }}</h2>
+    <img class="feature" {{ with $img }} src="{{ $img.Permalink }}" alt="{{ $title }}" {{ end }}>
+    <p class="summary">{{ .Summary }}</p>
+  </a>
+</div>
+{{ end }}
+{{ else }}
+<div class="block article-listitem comingsoon">
+  <div class="box">
+    <span class="no">coming soon</span>
+    <p class="text">次のカレーをまっててね！</p>
+  </div>
+</div>
+{{ end }}
+{{- end -}}

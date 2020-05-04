@@ -1,0 +1,22 @@
+baseURL = "https://curry.girigiribauer.com/"
+languageCode = "ja-jp"
+title = "お昼に何食べるか考えるのつらい ご当地カレーが食べたい！"
+theme = "curry"
+hasCJKLanguage = true
+Paginate = 100
+preserveTaxonomyNames = true
+EnableGitInfo = false
+pluralizelisttitles = false
+googleAnalytics = "UA-36767095-3"
+disableKinds = ["section", "taxonomy", "taxonomyTerm", "sitemap"]
+enableEmoji = true
+
+[permalinks]
+post = "/:filename/"
+
+[params]
+author = "girigiribauer"
+description = "いつもお昼が麺類なのはいやだよう、何食べるか考えるのつらいよう・・・よーしそれじゃあ、ご当地のレトルトカレーをネットで頼んで食べてしまおう！ご当地カレーが食べたいYO！ :curry:! :curry:! :curry:!"
+
+[markup.goldmark.renderer]
+unsafe = true
