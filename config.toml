@@ -21,5 +21,5 @@ description = "いつもお昼が麺類なのはいやだよう、何食べる�
 [markup.goldmark.renderer]
 unsafe = true
 
-[context.production.environment]
-HUGO_VERSION = "0.64.1"
+[build.environment]
+HUGO_VERSION = "0.69.2"
