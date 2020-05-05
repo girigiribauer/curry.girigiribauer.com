@@ -5,24 +5,45 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   {{- if .IsHome }}
-  <title>{{ .Site.Title }}</title>
+  <title>{{ .Site.Title | safeHTML }}</title>
+  <meta property="og:title" content="{{ .Site.Title | safeHTMLAttr }}">
+  <meta name="twitter:title" content="{{ .Site.Title | safeHTMLAttr }}">
   {{- else }}
-  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <title>{{ .Title | safeHTML }} | {{ .Site.Title | safeHTML }}</title>
+  <meta property="og:title" content="{{ .Title | safeHTMLAttr }} | {{ .Site.Title | safeHTMLAttr }}">
+  <meta name="twitter:title" content="{{ .Title | safeHTMLAttr }}">
   {{- end }}
   {{- if .IsHome }}
-  <meta name="description" content="{{ .Site.Params.description }}">
+  <meta name="description" content="{{ .Site.Params.description | safeHTMLAttr }}">
+  <meta property="og:description" content="{{ .Site.Params.description | safeHTMLAttr }}">
+  <meta name="twitter:description" content="{{ .Site.Params.description | safeHTMLAttr }}">
   {{- else }}
-  <meta name="description" content="{{ .Params.Summary }}">
+  <meta name="description" content="{{ .Params.Summary | safeHTMLAttr }}">
+  <meta property="og:description" content="{{ .Params.Summary | safeHTMLAttr }}">
+  <meta name="twitter:description" content="{{ .Params.Summary | safeHTMLAttr }}">
   {{- end }}
+  {{- if .IsHome }}
+  <meta property="og:type" content="website">
+  {{- else }}
+  <meta property="og:type" content="article">
+  {{- end }}
+  <meta property="og:url" content="{{ .Permalink }}">
   {{- if .IsHome }}
   <meta property="og:image" content="{{ .Site.BaseURL }}images/ogimage.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}images/ogimage.jpg">
   {{- else }}
   {{- $featureImage := (.Resources.ByType "image").GetMatch "heroimage.jpg" }}
   {{- with $featureImage }}
   {{- $resizedFeatureImage := $featureImage.Fit "1200x630" }}
   <meta property="og:image" content="{{ $resizedFeatureImage.Permalink }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ $resizedFeatureImage.Permalink }}">
   {{- end }}
   {{- end }}
+  <meta name="twitter:site" content="@girigiribauer">
+  <meta name="twitter:creator" content="@girigiribauer">
+
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
   {{ hugo.Generator }}
