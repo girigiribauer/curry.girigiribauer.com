@@ -11,7 +11,7 @@
   {{- else }}
   <title>{{ .Title | safeHTML }} | {{ .Site.Title | safeHTML }}</title>
   <meta property="og:title" content="{{ .Title | safeHTMLAttr }} | {{ .Site.Title | safeHTMLAttr }}">
-  <meta name="twitter:title" content="{{ .Title | safeHTMLAttr }}">
+  <meta name="twitter:title" content="{{ .Title | safeHTMLAttr }} | {{ .Site.Title | safeHTMLAttr }}">
   {{- end }}
   {{- if .IsHome }}
   <meta name="description" content="{{ .Site.Params.description | safeHTMLAttr }}">
