@@ -15,7 +15,7 @@
   <meta name="description" content="{{ .Params.Summary }}">
   {{- end }}
   {{- if .IsHome }}
-  <meta property="og:image" content="/images/ogimage.jpg">
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/ogimage.jpg">
   {{- else }}
   {{- $featureImage := (.Resources.ByType "image").GetMatch "heroimage.jpg" }}
   {{- with $featureImage }}
