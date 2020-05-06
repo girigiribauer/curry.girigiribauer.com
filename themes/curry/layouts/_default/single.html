@@ -25,15 +25,16 @@
   </div>
 </footer>
 
-{{ if .Prev }}
-{{ with .Prev }}
+{{ if .Next }}
+{{ with .Next }}
 {{ $title := .Title | markdownify }}
-{{ $img := (.Resources.ByType "image").GetMatch "*" }}
-<div class="block article-listitem" {{ with $img }} style="background-image: url('{{ .Permalink }}')" {{ end }}>
+{{- $background := (.Resources.ByType "image").GetMatch "background.jpg" }}
+{{- $featureImage := (.Resources.ByType "image").GetMatch "heroimage.jpg" }}
+<div class="block article-listitem" {{ with $background }} style="background-image: url('{{ .Permalink }}')" {{ end }}>
   <a class="box" href="{{ .Permalink }}">
     <span class="no">#{{ .Slug }}</span>
     <h2 class="heading">{{ $title }}</h2>
-    <img class="feature" {{ with $img }} src="{{ $img.Permalink }}" alt="{{ $title }}" {{ end }}>
+    <img class="feature" {{ with $featureImage }} src="{{ .Permalink }}" alt="{{ $title }}" {{ end }}>
     <p class="summary">{{ .Summary }}</p>
   </a>
 </div>

@@ -230,6 +230,6 @@ https://ganjyu.co.jp/company2.html
 
 ---
 
-**沖縄県、紅あぐー豚のカレー**
+**沖縄 紅あぐー豚のカレー**
 
 **おいしゅうございました！ :pray: :pray: :pray:**

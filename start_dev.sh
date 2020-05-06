@@ -1,3 +1,3 @@
 #!/bin/bash
 
-hugo server -D -F -p 1212
+hugo server -F -p 1212
