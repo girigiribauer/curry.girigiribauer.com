@@ -285,6 +285,28 @@ img {
   border: 0;
 }
 
+.article-single blockquote {
+  position: relative;
+  margin: 3rem 0;
+  padding: 1.5rem 1rem 1.5rem 3rem;
+  background: #fffcf6;
+  border-left: #e0c89f solid 5px;
+}
+.article-single blockquote:before {
+  content: '“';
+  position: absolute;
+  left: 0.25rem;
+  top: 0.25rem;
+  color: #e0c89f;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.article-single blockquote p:last-child {
+  margin-bottom: 0;
+}
+
 .article-single h2:before,
 .article-single h3:before,
 .article-single h4:before {
