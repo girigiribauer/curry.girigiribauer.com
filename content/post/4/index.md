@@ -1,6 +1,6 @@
 ---
 title: "大分 豊後きのこカレー！"
-summary: "大分県豊後の、しいたけがたっぷり"
+summary: "大分県豊後の、しいたけがたっぷり、しいたけ祭りじゃー！"
 featured_image: heroimage.jpg
 date: 2020-05-08T12:00:00+09:00
 publishdate: 2020-05-08
