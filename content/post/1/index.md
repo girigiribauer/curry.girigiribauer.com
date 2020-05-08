@@ -65,7 +65,7 @@ slug: 1
 
 ---
 
-![カレー](heroimage.jpg)
+![カレー](photo07.jpg)
 
 **これだー！！:curry:**
 
@@ -137,7 +137,7 @@ https://ganjyu.co.jp/company2.html
 
 ---
 
-![カレーとパッケージ](photo07.jpg)
+![カレーとパッケージ](heroimage.jpg)
 
 **きたーーー！！！ :curry: :curry: :curry:**
 

@@ -53,7 +53,7 @@ slug: 2
 
 ---
 
-![カレー](heroimage.jpg)
+![カレー](photo05.jpg)
 
 **これだー！！:curry:**
 
@@ -148,7 +148,7 @@ slug: 2
 
 ---
 
-![カレーとパッケージ](photo05.jpg)
+![カレーとパッケージ](heroimage.jpg)
 
 **ずずーんーーー！！！ :curry: :curry: :curry:**
 

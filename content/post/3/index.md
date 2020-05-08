@@ -46,7 +46,7 @@ slug: 3
 
 ---
 
-![カレー](heroimage.jpg)
+![カレー](photo06.jpg)
 
 **Wow! Tomatoish!! :tomato: :tomato: :tomato: :tomato: :tomato: :tomato:**
 
@@ -187,7 +187,7 @@ https://www.amazon.co.jp/dp/B00OL6EN2K/
 
 ---
 
-![カレーとパッケージ](photo06.jpg)
+![カレーとパッケージ](heroimage.jpg)
 
 **どどーん！ :curry: :curry: :curry:**
 
