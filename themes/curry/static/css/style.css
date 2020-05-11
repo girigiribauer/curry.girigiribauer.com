@@ -369,3 +369,19 @@ img {
 .footer strong {
   font-weight: bold;
 }
+
+.footer .links {
+  margin-top: 2rem;
+}
+
+.footer .links a {
+  margin-right: 1rem;
+}
+.footer .links a:before {
+  content: '';
+  padding-left: 1rem;
+  border-left: 1px solid #805001;
+}
+.footer .links a:first-child:before {
+  content: none;
+}
