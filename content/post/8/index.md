@@ -1,6 +1,6 @@
 ---
 title: "福岡 手羽元カレー！"
-summary: "福岡県の手羽元"
+summary: "福岡県のじっくり煮込んだ華味鳥の手羽元まるごと入った食べ応えのある味のやつ！"
 featured_image: heroimage.jpg
 date: 2020-05-13T12:00:00+09:00
 publishdate: 2020-05-13
