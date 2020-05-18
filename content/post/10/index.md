@@ -2,8 +2,8 @@
 title: "愛媛 伊予麦酒牛の欧風カレー！"
 summary: "愛媛県のビール牛にワインで漬け込むとかいう謎チャンポンなカレーだぞ！"
 featured_image: heroimage.jpg
-date: 2020-05-15T12:00:00+09:00
-publishdate: 2020-05-15
+date: 2020-05-16T12:00:00+09:00
+publishdate: 2020-05-16
 draft: false
 slug: 10
 ---
