@@ -453,6 +453,6 @@ https://ja.wikipedia.org/wiki/%E8%8C%B6%E7%B2%A5
 
 ---
 
-**奈良 大和肉鶏カレー！**
+**奈良 大和肉鶏カレー**
 
 **おいしゅうございました！ :pray: :pray: :pray:**
