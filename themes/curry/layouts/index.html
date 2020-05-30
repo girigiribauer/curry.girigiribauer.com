@@ -19,7 +19,7 @@
     <div class="box-inside">
       <span class="no">#{{ .Slug }}</span>
       <h2 class="heading">{{ $title }}</h2>
-      <img class="feature" {{ with $featureImage }} src="{{ .Permalink }}" alt="{{ $title }}" {{ end }}>
+      <img class="feature" {{ with $featureImage }} src="{{ .Permalink }}" alt="{{ $title }}" {{ end }} loading="lazy">
       <p class="summary">{{ .Summary }}</p>
     </div>
   </a>

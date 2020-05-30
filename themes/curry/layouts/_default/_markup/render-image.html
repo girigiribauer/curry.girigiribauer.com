@@ -1,0 +1,7 @@
+{{ $myImg := .Page.Resources.GetMatch .Destination }}
+{{ $altText := .PlainText }}
+{{ with $myImg }}
+<img src="{{ .Permalink }}" alt="{{ $altText }}" loading="lazy">
+{{ else }}
+<img src="/images/not_found_image.png" alt="not found" loading="lazy">
+{{ end }}
