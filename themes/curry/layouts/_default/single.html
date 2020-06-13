@@ -7,6 +7,7 @@
 </nav>
 
 <header class="block hero itadakimasu">
+  <img class="background" src="/images/background.jpg" alt="" loading="lazy">
   <h1 class="heading">
     <span class="no">#{{ .Slug }}</span>
     <span class="phrase">{{ .Title | markdownify }}</span>
@@ -20,6 +21,7 @@
 </article>
 
 <footer class="block hero gochisousama">
+  <img class="background" src="/images/background.jpg" alt="" loading="lazy">
   <div class="heading">
     <span class="phrase">ごちそうさまでした！</span>
   </div>
@@ -34,7 +36,7 @@
   <a class="box" href="{{ .Permalink }}">
     <span class="no">#{{ .Slug }}</span>
     <h2 class="heading">{{ $title }}</h2>
-    <img class="feature" {{ with $featureImage }} src="{{ .Permalink }}" alt="{{ $title }}" {{ end }}>
+    <img class="feature" {{ with $featureImage }} src="{{ .Permalink }}" alt="{{ $title }}" loading="lazy" {{ end }}>
     <p class="summary">{{ .Summary }}</p>
   </a>
 </div>
