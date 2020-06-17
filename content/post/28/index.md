@@ -2,8 +2,8 @@
 title: "長野 軽井沢欧風カレー！"
 summary: "長野県の素材を使えども、それをインド風でもなく和風でもなく欧風に仕上げちゃった美味いやつ！"
 featured_image: heroimage.jpg
-date: 2020-06-18T12:00:00+09:00
-publishdate: 2020-06-18
+date: 2020-06-17T12:00:00+09:00
+publishdate: 2020-06-17
 draft: false
 slug: 28
 ---
