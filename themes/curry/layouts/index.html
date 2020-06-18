@@ -1,30 +1,22 @@
 {{- define "main" -}}
 
-{{- if .IsHome }}
-<header class="block hero date1">
-  <img class="background" src="/images/background.jpg" alt="" loading="lazy">
-  <h1 class="heading">
-    <span class="phrase">お昼に何食べるか考えるのつらい</span>
-    <span class="phrase">ご当地カレーが食べたい！</span>
-  </h1>
+<header class="sitetitle">
+  <h1 class="heading">お昼に何食べるか考えるのつらい<br>ご当地カレーが食べたい！</h1>
 </header>
-{{- end }}
 
-{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- range $pages.ByPublishDate.Reverse }}
-{{- $title := .Title | markdownify }}
-{{- $background := (.Resources.ByType "image").GetMatch "background.jpg" }}
-{{- $featureImage := (.Resources.ByType "image").GetMatch "heroimage.jpg" }}
-<div class="block article-listitem" {{ with $background }} style="background-image: url('{{ .Permalink }}')" {{ end }}>
-  <a class="box" href="{{ .Permalink }}">
-    <div class="box-inside">
+<div class="articles">
+  <div class="articles-listitem">
+    {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{- range $pages.ByPublishDate.Reverse }}
+    {{- $title := .Title | markdownify }}
+    {{- $feature := ((.Resources.ByType "image").GetMatch "heroimage.jpg").Resize "400x q60" }}
+    <a class="box articlebox" href="{{ .Permalink }}">
       <span class="no">#{{ .Slug }}</span>
+      <img class="feature" {{ with $feature }} src="{{ .Permalink }}" alt="" {{ end }} loading="lazy">
       <h2 class="heading">{{ $title }}</h2>
-      <img class="feature" {{ with $featureImage }} src="{{ .Permalink }}" alt="{{ $title }}" {{ end }} loading="lazy">
       <p class="summary">{{ .Summary }}</p>
-    </div>
-  </a>
+    </a>
+    {{- end }}
+  </div>
 </div>
-{{- end }}
-
 {{- end -}}

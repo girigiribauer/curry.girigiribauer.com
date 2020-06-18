@@ -29,9 +29,9 @@
   {{- end }}
   <meta property="og:url" content="{{ .Permalink }}">
   {{- if .IsHome }}
-  <meta property="og:image" content="{{ .Site.BaseURL }}images/ogimage.jpg">
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/ogimage.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="{{ .Site.BaseURL }}images/ogimage.jpg">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}images/ogimage.png">
   {{- else }}
   {{- $featureImage := (.Resources.ByType "image").GetMatch "heroimage.jpg" }}
   {{- with $featureImage }}
@@ -51,7 +51,26 @@
 </head>
 
 <body>
+  <nav class="globalheader">
+    <a href="/">
+      <img class="icon" src="/images/icon-curry.svg" alt="">
+      <span class="text"><span class="p1">お昼に何食べるか考えるのつらい</span> <span class="p2">ご当地カレーが食べたい！</span></span>
+    </a>
+  </nav>
+
   {{ block "main" . }}{{ end }}
+
+  <div class="wanted">
+    <div class="box">
+      <h2>美味しい情報、大募集！</h2>
+      <ul>
+        <li>この地方に来たなら、ここのカレー食べなよ！</li>
+        <li>うちの県のご当地レトルトカレー、超うまい</li>
+        <li>なんなら<strong>レトルトカレー送って！</strong></li>
+      </ul>
+      <p><a href="https://twitter.com/girigiribauer" target="_blank">@girigiribauer</a> まで <strong>気軽に連絡してね！</strong></p>
+    </div>
+  </div>
 
   <div class="footer">
     <p><strong>カレー以外の文章はすべてフィクションです。</strong></p>

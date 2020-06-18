@@ -1,52 +1,55 @@
 {{- define "main" -}}
-<nav class="globalnavi">
-  <a href="/">
-    <img class="icon" src="/images/icon-curry-brown.svg" alt="">
-    <span class="text">お昼に何食べるか考えるのつらい ご当地カレーが食べたい！</span>
-  </a>
-</nav>
-
-<header class="block hero itadakimasu">
-  <img class="background" src="/images/background.jpg" alt="" loading="lazy">
-  <h1 class="heading">
-    <span class="no">#{{ .Slug }}</span>
-    <span class="phrase">{{ .Title | markdownify }}</span>
-  </h1>
+<header class="singletitle">
+  <span class="no">#{{ .Slug }}</span>
+  <h1 class="heading">{{ .Title | markdownify }}</h1>
 </header>
 
-<article class="article-single">
+<article class="article">
   <div class="box">
     {{ .Content }}
   </div>
 </article>
 
-<footer class="block hero gochisousama">
-  <img class="background" src="/images/background.jpg" alt="" loading="lazy">
-  <div class="heading">
-    <span class="phrase">ごちそうさまでした！</span>
-  </div>
-</footer>
+<div class="singletitle">
+  <div class="heading feast">ごちそうさまでした！</div>
+</div>
 
-{{ if .Next }}
-{{ with .Next }}
-{{ $title := .Title | markdownify }}
-{{- $background := (.Resources.ByType "image").GetMatch "background.jpg" }}
-{{- $featureImage := (.Resources.ByType "image").GetMatch "heroimage.jpg" }}
-<div class="block article-listitem" {{ with $background }} style="background-image: url('{{ .Permalink }}')" {{ end }}>
-  <a class="box" href="{{ .Permalink }}">
-    <span class="no">#{{ .Slug }}</span>
-    <h2 class="heading">{{ $title }}</h2>
-    <img class="feature" {{ with $featureImage }} src="{{ .Permalink }}" alt="{{ $title }}" loading="lazy" {{ end }}>
-    <p class="summary">{{ .Summary }}</p>
-  </a>
-</div>
-{{ end }}
-{{ else }}
-<div class="block article-listitem comingsoon">
-  <div class="box">
-    <span class="no">coming soon</span>
-    <p class="text">次のカレーをまっててね！</p>
+<nav class="neighbor-articles">
+  <div class="articles-listitem">
+    {{ if .Next }}
+    {{ with .Next }}
+    {{- $title := .Title | markdownify }}
+    {{- $feature := ((.Resources.ByType "image").GetMatch "heroimage.jpg").Resize "400x q60" }}
+    <a class="box box-next articlebox" href="{{ .Permalink }}">
+      <span class="label">Next</span>
+      <span class="no">#{{ .Slug }}</span>
+      <img class="feature" {{ with $feature }} src="{{ .Permalink }}" alt="" {{ end }} loading="lazy">
+      <h2 class="heading">{{ $title }}</h2>
+      <p class="summary">{{ .Summary }}</p>
+    </a>
+    {{ end }}
+    {{ else }}
+    <div class="box articlebox">
+      <span class="label">Next</span>
+      <img class="feature" src="/images/img-comingsoon.jpg" alt="" loading="lazy">
+      <h2 class="heading">まだないよ！</h2>
+      <p class="summary">次のカレーを待っててね！</p>
+    </div>
+    {{ end }}
+
+    {{ if .Prev }}
+    {{ with .Prev }}
+    {{- $title := .Title | markdownify }}
+    {{- $feature := ((.Resources.ByType "image").GetMatch "heroimage.jpg").Resize "400x q60" }}
+    <a class="box box-prev articlebox" href="{{ .Permalink }}">
+      <span class="label">Prev</span>
+      <span class="no">#{{ .Slug }}</span>
+      <img class="feature" {{ with $feature }} src="{{ .Permalink }}" alt="" {{ end }} loading="lazy">
+      <h2 class="heading">{{ $title }}</h2>
+      <p class="summary">{{ .Summary }}</p>
+    </a>
+    {{ end }}
+    {{ end }}
   </div>
-</div>
+</nav>
 {{ end }}
-{{- end -}}
