@@ -12,7 +12,7 @@
     {{- $feature := ((.Resources.ByType "image").GetMatch "heroimage.jpg").Resize "400x q60" }}
     <a class="box articlebox" href="{{ .Permalink }}">
       <span class="no">#{{ .Slug }}</span>
-      <img class="feature" {{ with $feature }} src="{{ .Permalink }}" alt="" {{ end }} loading="lazy">
+      <img class="feature" {{ with $feature }}src="{{ .Permalink }}" {{ end }} alt="" width="400" height="300" loading="lazy">
       <h2 class="heading">{{ $title }}</h2>
       <p class="summary">{{ .Summary }}</p>
     </a>
