@@ -43,9 +43,7 @@
   {{- end }}
   <meta name="twitter:site" content="@girigiribauer">
   <meta name="twitter:creator" content="@girigiribauer">
-
   <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
   <meta name="google-site-verification" content="Hv81T5d68iOl4aPbcpITvWxzImcZn4eiV-t3N5No7JM" />
   {{ hugo.Generator }}
 </head>
@@ -83,8 +81,8 @@
 
   {{ if not .Site.IsServer }}
   {{ with .Site.GoogleAnalytics }}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-  <script>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script defer>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
@@ -93,6 +91,17 @@
   </script>
   {{ end }}
   {{ end }}
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Indie Flower', 'Noto+Sans JP:400,900'],
+        urls: [
+          'https://fonts.googleapis.com/css2?family=Indie+Flower&family=Noto+Sans+JP:wght@400;900&display=swap',
+        ],
+      }
+    });
+  </script>
 </body>
 
 </html>
