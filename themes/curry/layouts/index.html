@@ -9,10 +9,18 @@
     {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{- range $pages.ByPublishDate.Reverse }}
     {{- $title := .Title | markdownify }}
-    {{- $feature := ((.Resources.ByType "image").GetMatch "heroimage.jpg").Resize "400x q60" }}
+    {{- $feature := .Resources.GetMatch "comingsoon" }}
+    {{- $featureOrigin := (.Resources.ByType "image").GetMatch "heroimage.jpg" }}
+    {{- if $featureOrigin }}
+    {{- $feature = $featureOrigin.Resize "800x q60" }}
+    {{- end }}
     <a class="box articlebox" href="{{ .Permalink }}">
       <span class="no">#{{ .Slug }}</span>
-      <img class="feature" {{ with $feature }}src="{{ .Permalink }}" {{ end }} alt="" width="400" height="300" loading="lazy">
+      {{ with $feature }}
+      <img class="feature" src="{{ .Permalink }}" alt="" width="400" height="300" loading="lazy">
+      {{ else }}
+      <img class="feature" src="/images/img-comingsoon.jpg" width="400" height="300" alt="" loading="lazy">
+      {{ end }}
       <h2 class="heading">{{ $title }}</h2>
       <p class="summary">{{ .Summary }}</p>
     </a>

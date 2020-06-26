@@ -18,6 +18,10 @@ post = "/:filename/"
 author = "girigiribauer"
 description = "ご当地カレーを食べよう！といいつつ、全国各地を妄想旅（リアル旅）しながら、おいしいご当地カレーを探していくご当地カレーブログ！"
 
+[[resources]]
+name = "comingsoon"
+src = "images/img-comingsoon.jpg"
+
 [markup.goldmark.renderer]
 unsafe = true
 

@@ -19,11 +19,17 @@
     {{ if .Next }}
     {{ with .Next }}
     {{- $title := .Title | markdownify }}
-    {{- $feature := ((.Resources.ByType "image").GetMatch "heroimage.jpg").Resize "400x q60" }}
+    {{- $feature := .Resources.GetMatch "comingsoon" }}
+    {{- $featureOrigin := (.Resources.ByType "image").GetMatch "heroimage.jpg" }}
+    {{- if $featureOrigin }}
+    {{- $feature = $featureOrigin.Resize "800x q60" }}
+    {{- end }}
     <a class="box box-next articlebox" href="{{ .Permalink }}">
       <span class="label">Next</span>
       <span class="no">#{{ .Slug }}</span>
-      <img class="feature" {{ with $feature }} src="{{ .Permalink }}" alt="" {{ end }} loading="lazy">
+      {{ with $feature }}
+      <img class="feature" src="{{ .Permalink }}" alt="" loading="lazy">
+      {{ end }}
       <h2 class="heading">{{ $title }}</h2>
       <p class="summary">{{ .Summary }}</p>
     </a>
@@ -40,11 +46,17 @@
     {{ if .Prev }}
     {{ with .Prev }}
     {{- $title := .Title | markdownify }}
-    {{- $feature := ((.Resources.ByType "image").GetMatch "heroimage.jpg").Resize "400x q60" }}
+    {{- $feature := .Resources.GetMatch "comingsoon" }}
+    {{- $featureOrigin := (.Resources.ByType "image").GetMatch "heroimage.jpg" }}
+    {{- if $featureOrigin }}
+    {{- $feature = $featureOrigin.Resize "400x q60" }}
+    {{- end }}
     <a class="box box-prev articlebox" href="{{ .Permalink }}">
       <span class="label">Prev</span>
       <span class="no">#{{ .Slug }}</span>
-      <img class="feature" {{ with $feature }} src="{{ .Permalink }}" alt="" {{ end }} loading="lazy">
+      {{ with $feature }}
+      <img class="feature" src="{{ .Permalink }}" alt="" loading="lazy">
+      {{ end }}
       <h2 class="heading">{{ $title }}</h2>
       <p class="summary">{{ .Summary }}</p>
     </a>
