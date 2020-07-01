@@ -8,4 +8,5 @@ draft: true
 slug: 40
 ---
 
+http://r.gnavi.co.jp/g-interview/entry/bad/4320
 http://kodawari.cc/
