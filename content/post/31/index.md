@@ -68,7 +68,7 @@ Champion! :crown:
 
 いえーい！
 
-旨そう！濃厚そう！！ :neckbeard:
+旨そう！濃厚そう！！ :smiling_imp:
 
 ---
 
