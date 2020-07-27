@@ -6,6 +6,7 @@ date: 2020-05-28T12:00:00+09:00
 publishdate: 2020-05-28
 draft: false
 slug: 20
+tags: ["47都道府県のご当地カレーシリーズ", "レトルトカレー"]
 ---
 **パンパカパーン！ :confetti_ball: :confetti_ball: :confetti_ball:**
 

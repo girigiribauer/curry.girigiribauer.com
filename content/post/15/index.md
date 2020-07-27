@@ -6,6 +6,7 @@ date: 2020-05-22T12:00:00+09:00
 publishdate: 2020-05-22
 draft: false
 slug: 15
+tags: ["47都道府県のご当地カレーシリーズ", "レトルトカレー"]
 ---
 
 **パンパカパーン！ :tada: :tada: :tada:**

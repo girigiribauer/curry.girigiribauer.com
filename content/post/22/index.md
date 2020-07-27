@@ -1,5 +1,4 @@
 ---
-
 title: "京都 京野菜カレー！"
 summary: "京都の京野菜をつかったカレーだぞ！ついでに京都をぐるぐる回っちゃうぞ！"
 featured_image: heroimage.jpg
@@ -7,6 +6,7 @@ date: 2020-06-01T12:00:00+09:00
 publishdate: 2020-06-01
 draft: false
 slug: 22
+tags: ["47都道府県のご当地カレーシリーズ", "レトルトカレー"]
 ---
 は〜〜
 

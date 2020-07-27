@@ -6,6 +6,7 @@ date: 2020-06-02T12:00:00+09:00
 publishdate: 2020-06-02
 draft: false
 slug: 23
+tags: ["47都道府県のご当地カレーシリーズ", "レトルトカレー"]
 ---
 **カレー食ってハッピー！ :curry: :revolving_hearts:**
 

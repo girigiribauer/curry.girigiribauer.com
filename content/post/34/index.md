@@ -6,6 +6,7 @@ date: 2020-07-17T12:00:00+09:00
 publishdate: 2020-07-17
 draft: false
 slug: 34
+tags: ["47都道府県のご当地カレーシリーズ", "レトルトカレー"]
 ---
 
 わーー :raised_hands:

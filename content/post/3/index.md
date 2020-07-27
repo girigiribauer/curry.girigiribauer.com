@@ -6,6 +6,7 @@ date: 2020-05-07T12:00:00+09:00
 publishdate: 2020-05-07
 draft: false
 slug: 3
+tags: ["47都道府県のご当地カレーシリーズ", "レトルトカレー"]
 ---
 **カレー前線、北上中！ :cherry_blossom: :cherry_blossom: :cherry_blossom:**
 

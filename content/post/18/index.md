@@ -6,6 +6,7 @@ date: 2020-05-26T12:00:00+09:00
 publishdate: 2020-05-26
 draft: false
 slug: 18
+tags: ["47都道府県のご当地カレーシリーズ", "レトルトカレー"]
 ---
 **反省** だ・・・ :monkey: :monkey: :monkey:
 
