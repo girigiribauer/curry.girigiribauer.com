@@ -1,5 +1,5 @@
 ---
-title: "北海道"
+title: "北海道 函館カレー！"
 summary: "北海道"
 featured_image: heroimage.jpg
 date: 2020-05-06T12:00:00+09:00
