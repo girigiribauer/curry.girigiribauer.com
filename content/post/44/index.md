@@ -1,6 +1,6 @@
 ---
 title: "宮城 肉屋牛たんカレー！"
-summary: "宮城"
+summary: "宮城で牛たん食べたすぎて牛たんがカレーになっちゃったやつー"
 featured_image: heroimage.jpg
 date: 2021-12-27T18:00:00+09:00
 publishdate: 2021-12-27
