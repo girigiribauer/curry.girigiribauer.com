@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PATH_PREFIX: /opt/services/
+      RELEASE_DIR: site
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -40,7 +41,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
 
           # rsync でカスタムポートを指定してアップロード
-          rsync -avz --delete --exclude '.git*' -e "ssh -p $SSH_PORT -o StrictHostKeyChecking=no" ./public/ ubuntu@${{ secrets.VPS_IP }}:${{env.PATH_PREFIX}}${{ secrets.DOMAIN }}/releases/${{ env.RELEASE_TIMESTAMP }}
+          rsync -avz --delete --exclude '.git*' -e "ssh -p $SSH_PORT -o StrictHostKeyChecking=no" ./public/ ubuntu@${{ secrets.VPS_IP }}:${{ env.PATH_PREFIX }}${{ secrets.DOMAIN }}/releases/${{ env.RELEASE_TIMESTAMP }}
 
       - name: シンボリックリンクの貼り替え
         env:
@@ -49,7 +50,7 @@ jobs:
           RELEASE_TIMESTAMP: ${{ env.RELEASE_TIMESTAMP }}
           SSH_PORT: ${{ secrets.VPS_SSH_PORT }}
         run: |
-          ssh -i ~/.ssh/id_rsa -p $SSH_PORT -o StrictHostKeyChecking=no ubuntu@${{ secrets.VPS_IP }} "ln -snf ${{env.PATH_PREFIX}}${{ secrets.DOMAIN }}/releases/${{ env.RELEASE_TIMESTAMP }} ${{env.PATH_PREFIX}}${{ secrets.DOMAIN }}/current"
+          ssh -i ~/.ssh/id_rsa -p $SSH_PORT -o StrictHostKeyChecking=no ubuntu@${{ secrets.VPS_IP }} "ln -snf ${{ env.PATH_PREFIX }}${{ secrets.DOMAIN }}/releases/${{ env.RELEASE_TIMESTAMP }} ${{ env.PATH_PREFIX }}${{ secrets.DOMAIN }}/${{ env.RELEASE_DIR }}"
 
       - name: 秘密鍵の削除
         if: always()
